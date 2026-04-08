@@ -1,0 +1,38 @@
+#heading{
+    color: blue;
+    font-size: larger;
+    text-align: center;
+    background-color: lightpink;
+    border: 2px solid greenyellow;
+   
+
+}
+
+#main-div{
+    background-color: lightgray;
+    text-align: center;
+    margin-top: 100px;
+    padding-left: 200px;  
+    
+  
+ 
+}
+
+#paragraph{
+   font-size: larger;
+   font-weight: 600;
+
+
+    
+
+}
+    
+
+#paragraph:hover{
+   background-color: lightcoral;
+   color: red;
+
+
+    
+
+}
