@@ -128,3 +128,102 @@ console.log("TY",ty);
 SumOfSquares(8,90)
 SumOfSquares(89,9)
 SumOfSquares(18,19)
+
+
+var x = 5;
+var y = x++; // post increment , x=x+1
+console.log(y, x);
+
+
+// Conditionals -- if else ,else if 
+
+// Fizzbuzz problem -- You have to write a function that takes a number ,if the number is divisble by 3 it should return fizz
+/// if the number is divisble by 5 it should return buzz
+// if the number is divisble by both 3 and 5 it should return fizzbuzz
+
+
+
+// Switch statement 
+
+// switch (expression){
+//     case value1:
+//         // code bloack
+//         break;
+//     case value2:
+//         // code block 
+//         break;    
+// }
+
+let day=3;
+
+switch (day){
+    case 1:
+        console.log("Its monday");
+       break;
+    case 2:
+         console.log("Its tuesday");
+         break;
+    case 3:
+         console.log("Its wednesday");
+         break;
+      default:
+          console.log("No cases executed");  
+
+
+}
+
+
+// You have to write a function that takes a month name and returns the number of days in that months
+
+// function NumMonths(monthName){
+//     switch (monthName) {
+//         case "January":
+//             return 31
+         
+//         case "February":
+//             return 28    
+            
+//             break;
+    
+//         default:
+//             return "Month Invalid"
+//             break;
+//     }
+
+// }
+
+// console.log(NumMonths("January"));
+
+
+// Loops ----->
+
+// for , while ,do while 
+
+// for (i=0; i<10;i++)   { // 10<10
+//     // the body whihc whould be executed multiple times will be there
+//     console.log(i);
+
+// }
+console.log("after foor loop")
+
+// let i=0;
+
+// while(i<10){
+//      console.log(i);
+//     //the logic goes
+//     // the repeated logic
+//     i++
+// } 
+
+// (inside a round bracket we pass an expression that is evaluated as true or false
+
+// do while loop 
+let i=100;
+
+do{
+    console.log("I would be executing no matter what")
+    // code that runs atleaast once
+}while(i<10){
+  console.log(i);
+  i++;
+}
