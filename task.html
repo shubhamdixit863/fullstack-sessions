@@ -23,8 +23,10 @@
 document.getElementById("task").addEventListener("click",function(){
    let task=document.getElementById("input").value;
    
-   document.getElementById("list").innerHTML=document.getElementById("list").innerHTML+"<li>"+task +"</li>"
+   //document.getElementById("list").innerHTML=document.getElementById("list").innerHTML+"<li>"+task +"</li>"
+   // template  literals
 
+   document.getElementById("list").innerHTML=document.getElementById("list").innerHTML+`<li>${task}</li>`
 
 
 })
