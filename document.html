@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 id="heading">My Name is -</h1>
+
+    <input type="text" id="input" >
+
+    <button id="my-btn" onclick="btnClick()">
+        Add Name
+    </button>
+
+
+
+
+    <script>
+
+        // document.getElementById("id") // Selecting eleemnts with the id ,it will return only single element
+        // document.getElementsByClassName("className") // you will get an array of all the elements to which this class belongs
+        // document.getElementsByTagName("tagName") // here again you will get multiple elements
+        // document.querySelector("#id") // it will single element to which that id belongs
+        // document.querySelector(".class") // it will single element to which that class belongs
+        // document.querySelectorAll("") // it returns array of elements
+
+function btnClick(){
+let value= document.getElementById("input").value;
+console.log(value);
+let initial=document.getElementById("heading").innerText
+document.getElementById("heading").innerText=initial+value;
+}
+
+       
+
+      // document.getElementById("my-btn")
+
+   
+
+
+    </script>
+    
+</body>
+</html>
