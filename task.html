@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <input type="text" id="input">
+
+    <button id="task">
+      Add Task
+    </button>
+
+    <ul id="list">
+
+    </ul>
+
+    <script>
+      
+document.getElementById("task").addEventListener("click",function(){
+   let task=document.getElementById("input").value;
+   
+   document.getElementById("list").innerHTML=document.getElementById("list").innerHTML+"<li>"+task +"</li>"
+
+
+
+})
+    </script>
+    
+</body>
+</html>
