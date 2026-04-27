@@ -7,6 +7,11 @@
 </head>
 <body>
 
+    <select>
+        <option>Select X</option>
+        <option>Select O</option>
+    </select>
+
 
     <input type="text" id="input">
 
@@ -30,6 +35,33 @@ document.getElementById("task").addEventListener("click",function(){
 
 
 })
+
+
+   // call back functions 
+   // A call back function is a function that is passed to another function as an argument 
+
+   function foo(cb){
+
+    cb()
+
+   }
+
+   function bar(i){
+      console.log(i+1);
+   }
+
+  bar(9)
+   foo(function  name
+   () {
+    console.log("I am from callback")
+
+   })
+
+   // Creating dynamic elements
+   // For  each loop in js 
+   // arrays in js 
+   // Object notation in js 
+
     </script>
     
 </body>
