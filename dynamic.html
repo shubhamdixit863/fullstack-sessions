@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" id="input">
+
+    <button id="btn" id="btn">Click</button>
+
+    <ul id="list">
+      
+
+    </ul>
+
+    <script>
+
+        // Source - https://stackoverflow.com/a/1349426
+// Posted by csharptest.net, modified by community. See post 'Timeline' for change history
+// Retrieved 2026-04-28, License - CC BY-SA 4.0
+
+function makeid(length) {
+    var result           = '';
+    var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    var charactersLength = characters.length;
+    for ( var i = 0; i < length; i++ ) {
+        result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    }
+    return result;
+}
+
+console.log(makeid(5));
+     // I will firstly grab the element
+
+     document.getElementById("btn").addEventListener("click",()=>{
+        let inputVal=document.getElementById("input").value;
+
+        let listElement=document.createElement("li");
+        let btnElement=document.createElement("button");
+        let id=makeid(5);
+        btnElement.innerText="Delete"
+        btnElement.setAttribute("data-id",id)
+        btnElement.addEventListener("click",function(elem){
+            let id = elem.target.getAttribute("data-id");
+            let element=document.getElementById(id);
+            document.getElementById("list").removeChild(element);
+
+        })
+
+
+        listElement.innerText=inputVal;
+        listElement.setAttribute("id",id)
+        listElement.style.color="green"
+        listElement.appendChild(btnElement)
+       // console.log(listElement);
+
+       const ul=document.getElementById("list");
+       ul.appendChild(listElement)
+ 
+     })
+
+
+    </script>
+    
+</body>
+</html>
