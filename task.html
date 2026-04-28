@@ -37,30 +37,371 @@ document.getElementById("task").addEventListener("click",function(){
 })
 
 
-   // call back functions 
-   // A call back function is a function that is passed to another function as an argument 
+//    // call back functions 
+//    // A call back function is a function that is passed to another function as an argument 
 
-   function foo(cb){
+//    function foo(cb){
 
-    cb()
+//     cb()
 
-   }
+//    }
 
-   function bar(i){
-      console.log(i+1);
-   }
+//    function bar(i){
+//       console.log(i+1);
+//    }
 
-  bar(9)
-   foo(function  name
-   () {
-    console.log("I am from callback")
+//   bar(9)
+//    foo(function  name
+//    () {
+//     console.log("I am from callback")
 
-   })
+//    })
 
    // Creating dynamic elements
    // For  each loop in js 
    // arrays in js 
    // Object notation in js 
+
+   var arr=[1,2,3,4,5,6];
+   // forEach ,map ,reduce ,filter
+
+   arr.forEach(function(ele){
+      console.log(ele);
+   })
+
+    let obj={name:"shubham"}
+
+     console.log(obj.name);
+        console.log(obj["name"]);
+
+
+    
+       // So you have an array of object 
+       
+       // [{}]
+
+       let json =[
+  {
+    "_id": "69f09dc622742b9685de435f",
+    "index": 0,
+    "guid": "5649e118-dded-4e40-ad2c-538325a4bdfc",
+    "isActive": false,
+    "balance": "$2,652.83",
+    "picture": "http://placehold.it/32x32",
+    "age": 25,
+    "eyeColor": "brown",
+    "name": "Esmeralda Mueller",
+    "gender": "female",
+    "company": "PRIMORDIA",
+    "email": "esmeraldamueller@primordia.com",
+    "phone": "+1 (804) 421-2191",
+    "address": "157 Varet Street, Klondike, South Dakota, 4182",
+    "about": "Anim laboris ut ea consequat enim incididunt. Dolore ex laborum est eiusmod nulla non. Amet non consequat mollit ex amet. Amet laboris nostrud enim reprehenderit qui dolore quis reprehenderit veniam. Id mollit laborum dolore aliquip est proident qui nulla sint tempor.\r\n",
+    "registered": "2019-02-17T10:40:28 -06:-30",
+    "latitude": -15.499951,
+    "longitude": -25.287247,
+    "tags": [
+      "excepteur",
+      "occaecat",
+      "quis",
+      "non",
+      "ex",
+      "duis",
+      "deserunt"
+    ],
+    "friends": [
+      {
+        "id": 0,
+        "name": "Church Savage"
+      },
+      {
+        "id": 1,
+        "name": "Shanna Cain"
+      },
+      {
+        "id": 2,
+        "name": "Swanson Peters"
+      }
+    ],
+    "greeting": "Hello, Esmeralda Mueller! You have 10 unread messages.",
+    "favoriteFruit": "strawberry"
+  },
+  {
+    "_id": "69f09dc6e630c132d793d3d3",
+    "index": 1,
+    "guid": "b6691315-ec56-48c4-a62d-aa0f8fb9ced5",
+    "isActive": false,
+    "balance": "$1,895.39",
+    "picture": "http://placehold.it/32x32",
+    "age": 27,
+    "eyeColor": "brown",
+    "name": "Watts Blankenship",
+    "gender": "male",
+    "company": "ANACHO",
+    "email": "wattsblankenship@anacho.com",
+    "phone": "+1 (809) 540-3869",
+    "address": "716 Aitken Place, Joes, Palau, 5846",
+    "about": "Elit in ad qui consectetur incididunt officia. Elit voluptate officia adipisicing ad exercitation nulla. Ut elit cupidatat id deserunt ex ad culpa pariatur dolore esse. Velit ad do quis anim quis sit anim nostrud veniam ullamco proident. Dolor fugiat culpa nulla aliquip eu velit quis sunt incididunt.\r\n",
+    "registered": "2017-05-02T12:30:33 -06:-30",
+    "latitude": 6.088374,
+    "longitude": -154.54415,
+    "tags": [
+      "laboris",
+      "adipisicing",
+      "dolor",
+      "ullamco",
+      "nulla",
+      "amet",
+      "nisi"
+    ],
+    "friends": [
+      {
+        "id": 0,
+        "name": "May Cabrera"
+      },
+      {
+        "id": 1,
+        "name": "Sandra Mathews"
+      },
+      {
+        "id": 2,
+        "name": "Sophia Hebert"
+      }
+    ],
+    "greeting": "Hello, Watts Blankenship! You have 10 unread messages.",
+    "favoriteFruit": "strawberry"
+  },
+  {
+    "_id": "69f09dc6e896b1ef27fe6726",
+    "index": 2,
+    "guid": "70c8be34-d200-48c8-bf78-84a51ed5a3f7",
+    "isActive": false,
+    "balance": "$2,294.37",
+    "picture": "http://placehold.it/32x32",
+    "age": 34,
+    "eyeColor": "brown",
+    "name": "Bobbie Horton",
+    "gender": "female",
+    "company": "ISOSWITCH",
+    "email": "bobbiehorton@isoswitch.com",
+    "phone": "+1 (901) 577-2939",
+    "address": "724 Huron Street, Dowling, Missouri, 2780",
+    "about": "Aliquip eiusmod ullamco ex eiusmod. Cillum adipisicing ullamco duis nulla consequat dolore ullamco officia mollit cupidatat officia labore irure dolor. Ea velit eiusmod dolore nulla reprehenderit est aliqua pariatur ex eu. Ad voluptate ea do irure aliquip in labore. Sint qui nulla reprehenderit Lorem ipsum adipisicing ea aliquip Lorem tempor. Sunt nulla ipsum et consequat in enim tempor aliqua non occaecat ullamco laboris.\r\n",
+    "registered": "2020-07-23T12:50:34 -06:-30",
+    "latitude": -66.898109,
+    "longitude": 14.038555,
+    "tags": [
+      "duis",
+      "ad",
+      "id",
+      "aliquip",
+      "officia",
+      "consectetur",
+      "fugiat"
+    ],
+    "friends": [
+      {
+        "id": 0,
+        "name": "Bright Wade"
+      },
+      {
+        "id": 1,
+        "name": "Horton Sheppard"
+      },
+      {
+        "id": 2,
+        "name": "Kristine Perez"
+      }
+    ],
+    "greeting": "Hello, Bobbie Horton! You have 1 unread messages.",
+    "favoriteFruit": "apple"
+  },
+  {
+    "_id": "69f09dc66d11647d4bb8ed58",
+    "index": 3,
+    "guid": "014394fd-1725-43be-a01f-f9c087ff6483",
+    "isActive": true,
+    "balance": "$3,019.32",
+    "picture": "http://placehold.it/32x32",
+    "age": 31,
+    "eyeColor": "green",
+    "name": "Guerra Robbins",
+    "gender": "male",
+    "company": "SCENTRIC",
+    "email": "guerrarobbins@scentric.com",
+    "phone": "+1 (923) 404-2191",
+    "address": "795 Dwight Street, Bellamy, Maryland, 6107",
+    "about": "Aliqua ea dolore commodo velit. Dolore ea amet aliqua nisi incididunt. Officia veniam et dolore anim anim esse et culpa voluptate ut consectetur do in cillum. In sint tempor amet velit quis veniam elit non ut in id.\r\n",
+    "registered": "2015-09-30T12:46:49 -06:-30",
+    "latitude": 55.793136,
+    "longitude": 32.594872,
+    "tags": [
+      "cillum",
+      "tempor",
+      "duis",
+      "dolore",
+      "dolore",
+      "est",
+      "esse"
+    ],
+    "friends": [
+      {
+        "id": 0,
+        "name": "Velasquez Kane"
+      },
+      {
+        "id": 1,
+        "name": "Dodson Reeves"
+      },
+      {
+        "id": 2,
+        "name": "Caitlin Mcleod"
+      }
+    ],
+    "greeting": "Hello, Guerra Robbins! You have 4 unread messages.",
+    "favoriteFruit": "strawberry"
+  },
+  {
+    "_id": "69f09dc67b8d9cbf0d6a96ed",
+    "index": 4,
+    "guid": "f8b32c3e-2d71-4990-83b6-7645339228a9",
+    "isActive": true,
+    "balance": "$3,545.42",
+    "picture": "http://placehold.it/32x32",
+    "age": 20,
+    "eyeColor": "brown",
+    "name": "Wright Kim",
+    "gender": "male",
+    "company": "MONDICIL",
+    "email": "wrightkim@mondicil.com",
+    "phone": "+1 (846) 548-2433",
+    "address": "504 Concord Street, Bennett, South Carolina, 650",
+    "about": "Ea veniam pariatur in reprehenderit esse excepteur exercitation mollit. Elit veniam sunt proident nisi incididunt adipisicing exercitation enim id nostrud anim non et est. Pariatur voluptate sint culpa amet. Cupidatat consectetur minim id sunt aliquip ut eu laborum aliquip amet aliquip. Sint excepteur ea nulla quis minim. Elit non officia nulla ad. Eiusmod aliquip pariatur cupidatat do laborum adipisicing reprehenderit deserunt culpa dolore aute esse velit incididunt.\r\n",
+    "registered": "2025-10-25T03:16:23 -06:-30",
+    "latitude": 86.590644,
+    "longitude": 134.701489,
+    "tags": [
+      "eiusmod",
+      "do",
+      "irure",
+      "eu",
+      "adipisicing",
+      "officia",
+      "et"
+    ],
+    "friends": [
+      {
+        "id": 0,
+        "name": "Daisy Fernandez"
+      },
+      {
+        "id": 1,
+        "name": "Allie Manning"
+      },
+      {
+        "id": 2,
+        "name": "Pauline Gonzalez"
+      }
+    ],
+    "greeting": "Hello, Wright Kim! You have 9 unread messages.",
+    "favoriteFruit": "strawberry"
+  },
+  {
+    "_id": "69f09dc68fa802dd74041516",
+    "index": 5,
+    "guid": "e75a02d3-b8b7-4308-9818-6110d634ab58",
+    "isActive": false,
+    "balance": "$3,080.34",
+    "picture": "http://placehold.it/32x32",
+    "age": 39,
+    "eyeColor": "brown",
+    "name": "Henderson Osborne",
+    "gender": "male",
+    "company": "ENERVATE",
+    "email": "hendersonosborne@enervate.com",
+    "phone": "+1 (929) 457-3813",
+    "address": "846 Baycliff Terrace, Carrizo, Arkansas, 3881",
+    "about": "Sit proident anim mollit ea consectetur eu deserunt est. Esse et quis quis aliquip laboris eiusmod non ullamco nisi. Dolor in excepteur mollit excepteur commodo sint qui esse adipisicing. Labore anim incididunt quis pariatur elit nostrud.\r\n",
+    "registered": "2018-02-08T04:51:09 -06:-30",
+    "latitude": 55.381974,
+    "longitude": 31.059997,
+    "tags": [
+      "id",
+      "sunt",
+      "fugiat",
+      "adipisicing",
+      "eu",
+      "qui",
+      "enim"
+    ],
+    "friends": [
+      {
+        "id": 0,
+        "name": "Adrian Aguilar"
+      },
+      {
+        "id": 1,
+        "name": "Haley George"
+      },
+      {
+        "id": 2,
+        "name": "Knapp Chan"
+      }
+    ],
+    "greeting": "Hello, Henderson Osborne! You have 2 unread messages.",
+    "favoriteFruit": "banana"
+  },
+  {
+    "_id": "69f09dc68e213a1103007920",
+    "index": 6,
+    "guid": "a122477a-da53-49f7-9c77-fa093191a418",
+    "isActive": false,
+    "balance": "$3,816.50",
+    "picture": "http://placehold.it/32x32",
+    "age": 40,
+    "eyeColor": "blue",
+    "name": "Rhonda Eaton",
+    "gender": "female",
+    "company": "SUREPLEX",
+    "email": "rhondaeaton@sureplex.com",
+    "phone": "+1 (828) 531-3052",
+    "address": "349 Temple Court, Caron, Mississippi, 645",
+    "about": "Incididunt non esse amet veniam. Aute enim aute exercitation ea pariatur duis exercitation excepteur ad culpa amet do nulla. Tempor consequat ullamco deserunt consectetur tempor proident magna culpa cillum ut duis exercitation et. In velit cillum irure mollit ipsum velit incididunt magna aliqua non nulla do esse. Id quis id cillum ex incididunt ullamco duis deserunt cupidatat consectetur labore nisi veniam sit.\r\n",
+    "registered": "2017-02-06T03:05:52 -06:-30",
+    "latitude": -26.275801,
+    "longitude": -19.975649,
+    "tags": [
+      "ipsum",
+      "eiusmod",
+      "labore",
+      "do",
+      "esse",
+      "in",
+      "nostrud"
+    ],
+    "friends": [
+      {
+        "id": 0,
+        "name": "Goodman Barrett"
+      },
+      {
+        "id": 1,
+        "name": "Pugh Sexton"
+      },
+      {
+        "id": 2,
+        "name": "Claudette Dalton"
+      }
+    ],
+    "greeting": "Hello, Rhonda Eaton! You have 6 unread messages.",
+    "favoriteFruit": "banana"
+  }
+]
+
+
+// Represent this in form of table 
+// create dynamic leements
+// and show each individual key 
 
     </script>
     
